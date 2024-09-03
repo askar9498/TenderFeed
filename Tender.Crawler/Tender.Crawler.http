@@ -1,0 +1,6 @@
+@Tender.Crawler_HostAddress = http://localhost:5259
+
+GET {{Tender.Crawler_HostAddress}}/CrawlTenders/
+Accept: application/json
+
+###
