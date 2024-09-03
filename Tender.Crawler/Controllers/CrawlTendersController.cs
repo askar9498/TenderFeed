@@ -15,9 +15,9 @@ public class CrawlTendersController : ControllerBase
     }
 
     [HttpGet(Name = "CrawlTenders")]
-    public async Task<List<Card>> Crawl(int pageNumber, int pageSize)
+    public async Task<TenderModel> Crawl(int pageNumber = 0, int pageSize = 5)
     {
         TenderModel news = await _trendCrawler.CrawlAsync(pageNumber, pageSize);
-        return news.Content;
+        return news;
     }
 }
