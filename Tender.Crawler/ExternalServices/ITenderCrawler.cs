@@ -2,7 +2,7 @@
 
 public interface ITenderCrawler
 {
-    Task<TenderModel> CrawlAsync();
+    Task<TenderModel> CrawlAsync(int pageNumber, int pageSize);
 }
 
 public class TenderModel
