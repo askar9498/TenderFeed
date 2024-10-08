@@ -8,7 +8,7 @@ public class Startup(IConfiguration configuration, IHostEnvironment environment)
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        string connectionString = configuration.GetConnectionString("CodalRawProvider")!;
+        string connectionString = configuration.GetConnectionString("TenderRawData")!;
         services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(connectionString));
     }
